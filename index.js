@@ -10,6 +10,11 @@ var createQueue = require('queue-async')
   , url = require('url')
   , fs = require('fs')
 
+// Define some content type mappings
+mime.define({
+  'application/json': ['map']
+});
+
 module.exports = s3syncer
 
 function s3syncer(db, options) {
